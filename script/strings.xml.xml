@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Root>
+[%- FOR file IN data.files %]
+	[%- IF data.usefile.$file.$target %]
+	<File path="[% file %]">
+	[%- FOR string IN data.data.$file.keys %]
+		<TranslationUnit Id = "[% string %]">
+			<Source>[% data.data.$file.$string.EN | html %]</Source>[% IF target != 'EN' %]
+			<Target>[% data.data.$file.$string.$target | html  %]</Target>[% END %]
+		</TranslationUnit>
+	[%- END %]
+	</File>
+	[%- END %]
+[%- END %]
+</Root>

@@ -1,0 +1,20 @@
+
+Hot to use those scripts for localization (SLT) :
+
+1) Run the "find_translation_todo.pl" script. It will create a folder where the "*-XX.txt" (XX for each language).
+
+e.g. :
+	./find_translations_todo.pl --dirs ~/path/to/squeezeplay/src/ --product squeezeplay_translation
+
+2) ZIP the txt files and send to SLT team <ch-slt@logitech.com>
+
+3) When the translated strings are back, extract to a folder and run "slt2strings.pl" script.
+
+	Call it from inside the folder where you have al the "*-XX.txt" files.
+	The --format parameter should be txt
+	The --dir is pointing to the root folder where it should look for strings.txt to merge with
+
+e.g. :
+	cd squeezeplay_translations
+	/path/to/slt2strings.pl --format txt --dirs /path/to/squeezeplay
+
