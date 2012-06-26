@@ -4,7 +4,7 @@ Hot to use those scripts for localization (SLT) :
 1) Run the "find_translation_todo.pl" script. It will create a folder where the "*-XX.txt" (XX for each language).
 
 e.g. :
-	./find_translations_todo.pl --dirs ~/path/to/squeezeplay/src/ --product squeezeplay_translation
+	./find_translations_todo.pl --dirs ~/path/to/squeezeplay/src/ --product squeezeplay
 
 2) ZIP the txt files and send to SLT team <ch-slt@logitech.com>
 
@@ -17,4 +17,6 @@ e.g. :
 e.g. :
 	cd squeezeplay_translations
 	/path/to/slt2strings.pl --format txt --dirs /path/to/squeezeplay
+
+4) Check-in the changes using your favorit GIT/GERRIT
 
